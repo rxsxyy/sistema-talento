@@ -1,12 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema T.A.L.E.N.T.O.</title>
+    <link rel="stylesheet" href="./styles/home.css">
 </head>
+
 <body>
-    <p>Teste de Aptidão, Levantamento de Especializações, Natureza, Tendências e Orientação.</p>
-    <p>Em Construção.</p>
+    <div class="container">
+
+        <div class="header">
+            <h1>Sistema T.A.L.E.N.T.O.</h1>
+        </div>
+
+        <div class="content">
+
+            <div class="sidebar">
+                <ul>
+                    <li><a class="nav-link" href="#" onclick="showContent('info'); return false;">Informações</a></li>
+                    <li><a class="nav-link" href="#" onclick="showContent('conf'); return false;">Configurações</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div id="info" class="content-panel">
+                    <h2>Informações</h2>
+                </div>
+                <div id="conf" class="content-panel" style="display: none;">
+                    <h2>Configurações</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(id) {
+            const panels = document.querySelectorAll('.content-panel');
+            panels.forEach(panel => {
+                panel.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
 </body>
+
 </html>
