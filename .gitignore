@@ -1,0 +1,8 @@
+# dependencias
+node_modules/
+package.json
+pnpm-lock.yaml
+
+# ide
+.vscode/
+
